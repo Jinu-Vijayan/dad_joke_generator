@@ -1,3 +1,7 @@
+:root{
+    --dark-mode-btn-container-position:25px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -55,6 +59,44 @@ body{
     border-radius: 0.625rem;
 }
 
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+#dark-mode-btn-container{
+    position: absolute;
+    top: var(--dark-mode-btn-container-position);
+    right: var(--dark-mode-btn-container-position);
+    border-radius: 50px;
+    width: 80px;
+    height: 40px;
+    background-color: #484646;
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    padding: 5px;
+}
+
+#dark-mode-btn-container>img{
+    height: 30px;
+}
+
+#toggle-btn{
+    border-radius: 50%;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: transform 0.5s;
+}
+
+.toggle-btn-position{
+    transform: translateX(40px);
+}
+
 @keyframes expand {
     from {
         background-color: #f05b5b;
@@ -76,7 +118,7 @@ body{
     }
 }
 
-@media screen and (max-width:369.5px) {
+@media screen and (max-width:382.5px) {
     #btn{
         width: 80%;
     }
